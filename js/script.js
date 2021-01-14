@@ -22,6 +22,7 @@ setTimeout(richiesta, 5000 );
 
 // -4- inserisco i numeri dell'utente dentro un array solo se sono uguali a quelli generati al punto 1.
 //     I numeri non si devono ripetere, ci vuole un controllo (if + includes? forse).
+// -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
 var numeriUtente =[];
 
 function richiesta() {
@@ -31,7 +32,15 @@ function richiesta() {
       numeriUtente.push(chiediNumero);
     }
   }
-};
+  console.log(numeriUtente);
 
-console.log(numeriUtente);
-// -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
+  if (numeriUtente.length == 0) {
+    console.log('Mamma mia, manco uno ne hai preso GG!')
+  } else if (numeriUtente.length == 1) {
+    console.log('Scarso! Hai indovinato un solo numero ed è: ' + numeriUtente)
+  } else if (numeriUtente.length == 5) {
+    console.log('Grande Mago! Li hai indovinati tutti! Come hai detto tu erano: ' + numeriUtente)
+  } else {
+    console.log('Hai indovinato ' + numeriUtente.length + ' numeri e sono: ' + numeriUtente);
+  }
+};
