@@ -8,3 +8,14 @@
 // -4- inserisco i numeri dell'utente dentro un array solo se sono uguali a quelli generati al punto 1.
 //     I numeri non si devono ripetere, ci vuole un controllo (if + includes? forse).
 // -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
+
+var numeriDaIndovinare = [];
+
+while (numeriDaIndovinare.length < 5) {
+  var numeroRandom = Math.floor(Math.random() * (100 - 1 + 1) ) + 1;
+  if (!numeriDaIndovinare.includes(numeroRandom)) {
+    numeriDaIndovinare.push(numeroRandom);
+  }
+}
+
+console.log(numeriDaIndovinare);
