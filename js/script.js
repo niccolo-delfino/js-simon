@@ -3,12 +3,6 @@
 // sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 // -1- genero dei numeri random assegnandoli ad un array.
-// -2- faccio comparire l'alert con l'array.
-// -3- faccio aspettare l'utente 30 secondi col setTimeout e poi copare una serie di 5 prompt.
-// -4- inserisco i numeri dell'utente dentro un array solo se sono uguali a quelli generati al punto 1.
-//     I numeri non si devono ripetere, ci vuole un controllo (if + includes? forse).
-// -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
-
 var numeriDaIndovinare = [];
 
 while (numeriDaIndovinare.length < 5) {
@@ -19,3 +13,11 @@ while (numeriDaIndovinare.length < 5) {
 }
 
 console.log(numeriDaIndovinare);
+
+// -2- faccio comparire l'alert con l'array.
+alert('Memorizza questi numeri! \nHai 30 secondi:' + '\n' + numeriDaIndovinare);
+
+// -3- faccio aspettare l'utente 30 secondi col setTimeout e poi copare una serie di 5 prompt.
+// -4- inserisco i numeri dell'utente dentro un array solo se sono uguali a quelli generati al punto 1.
+//     I numeri non si devono ripetere, ci vuole un controllo (if + includes? forse).
+// -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
