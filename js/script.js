@@ -17,7 +17,21 @@ console.log(numeriDaIndovinare);
 // -2- faccio comparire l'alert con l'array.
 alert('Memorizza questi numeri! \nHai 30 secondi:' + '\n' + numeriDaIndovinare);
 
-// -3- faccio aspettare l'utente 30 secondi col setTimeout e poi copare una serie di 5 prompt.
+// -3- faccio aspettare l'utente 30 secondi (per ora 5) col setTimeout e poi copare una serie di 5 prompt.
+setTimeout(richiesta, 5000 );
+
 // -4- inserisco i numeri dell'utente dentro un array solo se sono uguali a quelli generati al punto 1.
 //     I numeri non si devono ripetere, ci vuole un controllo (if + includes? forse).
+var numeriUtente =[];
+
+function richiesta() {
+  for (var i = 0; i < 5; i++) {
+    var chiediNumero = parseInt(prompt('Inserisci un numero!'));
+    if (!numeriUtente.includes(chiediNumero) && numeriDaIndovinare.includes(chiediNumero)) {
+      numeriUtente.push(chiediNumero);
+    }
+  }
+};
+
+console.log(numeriUtente);
 // -5- dico quanti sono stati indovinati grazie all'array.length e quali grazie alla seconda array.
